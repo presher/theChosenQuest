@@ -11,4 +11,15 @@ package TheChosenQuest.model;
  */
 public class Map {
     
+    private static final int NUM_ROWS = 5;
+    private static final int NUM_COLS = 5;
+    
+    private Location[][] Locations;
+    
+    public Map(){
+        Locations = new Location[NUM_ROWS][NUM_COLS];
+}
+    public Location getLocation(int row, int col){
+        return Locations[row][col];
+    }
 }

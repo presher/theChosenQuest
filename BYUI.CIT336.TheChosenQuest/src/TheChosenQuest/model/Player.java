@@ -6,6 +6,7 @@
 package TheChosenQuest.model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
@@ -21,9 +22,23 @@ public class Player implements Serializable{
     List<Races> Character;
     List<Attributes> Attributes;
     public Player(){
-        
+        Inventory = new ArrayList<>();
+        Item = new ArrayList<>();
+        Character = new ArrayList<>();
+        Attributes = new ArrayList<>();
     }
-
+    public void addInventory(Inventory i){
+        Inventory.add(i);
+    }
+    public void addItems(Items i){
+        Item.add(i);
+    }
+    public void addRaces(Races r){
+        Character.add(r);
+    }
+    public void addAttributes(Attributes a){
+        Attributes.add(a);
+    }
     public String getName() {
         return name;
     }
