@@ -12,7 +12,7 @@ import java.util.Objects;
 
 /**
  *
- * @author Jason
+ * @author Jeremy
  */
 public class Fight_Scene implements Serializable {
     List<Fight_Scene> Battle;

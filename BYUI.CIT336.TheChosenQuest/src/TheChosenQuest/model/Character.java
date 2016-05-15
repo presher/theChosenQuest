@@ -12,7 +12,7 @@ import java.util.Objects;
 
 /**
  *
- * @author Jason
+ * @author Jeremy
  */
 public class Character implements Serializable{
     private String Name;

@@ -12,7 +12,7 @@ import java.util.Objects;
 
 /**
  *
- * @author Jason
+ * @author Jeremy
  */
 public class Attributes implements Serializable{
     private String Constitution;
