@@ -6,6 +6,8 @@
 package TheChosenQuest.model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 /**
@@ -13,28 +15,29 @@ import java.util.Objects;
  * @author Jason
  */
 public class Location implements Serializable{
-    Visited Visited;
-    amountRemaining amountRemaining;
+    List<Location> Visited;
+    List<Location> amountRemaining;
     Attributes Attributes;
     Map Map;
     
     public Location(){
-        
+        Visited = new ArrayList<>();
+        amountRemaining = new ArrayList<>();
     }
 
-    public Visited getVisited() {
+    public List<Location> getVisited() {
         return Visited;
     }
 
-    public void setVisited(Visited Visited) {
+    public void setVisited(List<Location> Visited) {
         this.Visited = Visited;
     }
 
-    public amountRemaining getAmountRemaining() {
+    public List<Location> getAmountRemaining() {
         return amountRemaining;
     }
 
-    public void setAmountRemaining(amountRemaining amountRemaining) {
+    public void setAmountRemaining(List<Location> amountRemaining) {
         this.amountRemaining = amountRemaining;
     }
 
@@ -44,14 +47,6 @@ public class Location implements Serializable{
 
     public void setAttributes(Attributes Attributes) {
         this.Attributes = Attributes;
-    }
-
-    public Location getLocation() {
-        return Location;
-    }
-
-    public void setLocation(Location Location) {
-        this.Location = Location;
     }
 
     public Map getMap() {
@@ -65,10 +60,10 @@ public class Location implements Serializable{
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 89 * hash + Objects.hashCode(this.Visited);
-        hash = 89 * hash + Objects.hashCode(this.amountRemaining);
-        hash = 89 * hash + Objects.hashCode(this.Attributes);
-        hash = 89 * hash + Objects.hashCode(this.Location);
+        hash = 41 * hash + Objects.hashCode(this.Visited);
+        hash = 41 * hash + Objects.hashCode(this.amountRemaining);
+        hash = 41 * hash + Objects.hashCode(this.Attributes);
+        hash = 41 * hash + Objects.hashCode(this.Map);
         return hash;
     }
 
@@ -93,7 +88,7 @@ public class Location implements Serializable{
         if (!Objects.equals(this.Attributes, other.Attributes)) {
             return false;
         }
-        if (!Objects.equals(this.Location, other.Location)) {
+        if (!Objects.equals(this.Map, other.Map)) {
             return false;
         }
         return true;
@@ -101,6 +96,7 @@ public class Location implements Serializable{
 
     @Override
     public String toString() {
-        return "Location{" + "Visited=" + Visited + ", amountRemaining=" + amountRemaining + ", Attributes=" + Attributes + ", Location=" + Location + '}';
+        return "Location{" + "Visited=" + Visited + ", amountRemaining=" + amountRemaining + ", Attributes=" + Attributes + ", Map=" + Map + '}';
     }
+
 }
