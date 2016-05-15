@@ -22,7 +22,9 @@ public class Menu implements Serializable{
         Menu = new ArrayList<>();
     }
 
-    
+    public List<Menu> getMenu() {
+        return Menu;
+    }
 
     public void setMenu(List<Menu> Menu) {
         this.Menu = Menu;
