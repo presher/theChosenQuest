@@ -14,7 +14,7 @@ import java.util.Objects;
 
 /**
  *
- * @author Jason
+ * @author Jason & Jeremy
  */
 public class Menu implements Serializable{
     List<Menu> Menu;

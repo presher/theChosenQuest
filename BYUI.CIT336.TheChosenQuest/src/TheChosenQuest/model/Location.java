@@ -12,7 +12,7 @@ import java.util.Objects;
 
 /**
  *
- * @author Jason
+ * @author Jason & Jeremy
  */
 public class Location implements Serializable{
     List<Location> Visited;
