@@ -5,10 +5,12 @@
  */
 package TheChosenQuest.model;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Jason
  */
-public class Game {
+public class Game implements Serializable {
     
 }
