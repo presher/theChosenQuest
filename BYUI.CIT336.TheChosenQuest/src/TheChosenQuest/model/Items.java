@@ -12,5 +12,24 @@ import java.io.Serializable;
  * @author Jeremy
  */
 public class Items implements Serializable{
+    private String manaPotion;
+    private String healthPotion;
+
+    public String getManaPotion() {
+        return manaPotion;
+    }
+
+    public String getHealthPotion() {
+        return healthPotion;
+    }
+
+    public void setManaPotion(String manaPotion) {
+        this.manaPotion = manaPotion;
+    }
+
+    public void setHealthPotion(String healthPotion) {
+        this.healthPotion = healthPotion;
+    }
+    
     
 }
