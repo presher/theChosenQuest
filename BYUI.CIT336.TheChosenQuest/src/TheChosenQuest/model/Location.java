@@ -19,6 +19,7 @@ public class Location implements Serializable{
     List<Location> amountRemaining;
     Attributes Attributes;
     Map Map;
+    Scene Scene;
     
     public Location(){
         Visited = new ArrayList<>();
@@ -55,6 +56,14 @@ public class Location implements Serializable{
 
     public void setMap(Map Map) {
         this.Map = Map;
+    }
+
+    public Scene getScene() {
+        return Scene;
+    }
+
+    public void setScene(Scene Scene) {
+        this.Scene = Scene;
     }
 
     @Override
