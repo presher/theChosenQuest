@@ -16,21 +16,27 @@ import TheChosenQuest.model.Inventory;
 
 public class inventoryControl extends Inventory {
    public void amountOfInventory(int Boots, int Armor, int gold, int Weapons){
-        if(gold < 0 && Boots < 0 && Armor < 0 && Weapons < 0){ //Empty Inventory
-            System.out.println("You have no inventory");
+        if(gold <= 0 ){ //Empty Inventory
+            System.out.println("\t\nYou have no gold");
+        }else{
+            System.out.println("\t\nYou have " + gold + " gold");
         }
-        if(gold > 0 && Boots < 0 && Armor < 0 && Weapons < 0){
-            System.out.println("\t\nYou have Gold " + gold);
+        if(Boots <= 0 ){
+            System.out.println("\t\nYou no have Gold");
+        }else{
+            System.out.println("\t\nYou have " + Boots + " boots");
         }
-        if(gold > 0 && Boots > 0 && Armor < 0 && Weapons < 0){
-            System.out.println("\t\nYou have gold, " + gold +  " and Boots " + Boots);
+        if(Armor <= 0){
+            System.out.println("\t\nYou have no armor");
+        }else{
+            System.out.println("\t\nYou have " + Armor + " armor");
         }
-        if(gold > 0 && Boots > 0 && Armor > 0 && Weapons < 0){
-            System.out.println("\t\nYou have Gold, " + gold + " and Boots, " + Boots + " and Armor " + Armor);
+        if(Weapons <= 0){
+            System.out.println("\t\nYou have no Weapons, ");
+        }else{
+            System.out.println("\t\nYou have " + Weapons + " weapons");
         }
-        if(gold > 0 && Boots > 0 && Armor > 0 && Weapons > 0){
-            System.out.println("\t\nYou have Gold " + gold + " and Boots " + Boots + " , and Armor " + Armor + " , and Weapons " + Weapons);
-        }
+        
         double inventoryTotal = Boots + Armor + gold + Weapons;
          System.out.println(inventoryTotal);
    }

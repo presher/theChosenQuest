@@ -14,7 +14,7 @@ import java.util.List;
  */
 public class locationControl extends Location {
     public void mapLocation(int Map, int Scene, List<Location>Visited, List<Location>amountRemaining){
-        if(Map < 0 && Scene < 0){
+        if(Map <= 0 || Scene <= 0){
             System.out.println("This is an invalid location");
         }else {
             System.out.println(" You have arrived at " + " Map location " + Map + " Scene " + Scene + " Visited " + Visited);
